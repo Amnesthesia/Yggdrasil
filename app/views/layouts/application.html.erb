@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Yggdrasil</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+  
 </head>
 <body>
-
-<%= yield %>
-
+	<%= render 'layouts/header' %>
+	<div class= "wrapper center" id="container">
+	
+	<%= yield %>
+			
+	</div>
+	<div class="footer container">
+		<div class="row">
+			<div class="span12">
+				<%= debug(params) if Rails.env.development? %>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
