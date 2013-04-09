@@ -1,4 +1,19 @@
 Yggdrasil::Application.routes.draw do
+  
+    # Resourcesssssss
+    resources :users, :roles, :categories, :posts
+    
+    # Static pages go here
+    get 'static_pages/home'
+    get 'static_pages/about'
+    get 'static_pages/help'
+    
+    match '/help', to: "StaticPages#help"
+    match '/about', to: "StaticPages#about"
+    match '/signup', to: "Users#new"
+    
+    root to: "StaticPages#home"
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
