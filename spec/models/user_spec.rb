@@ -1,24 +1,3 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :integer          not null, primary key
-#  first_name      :string(255)
-#  last_name       :string(255)
-#  username        :string(255)
-#  password_digest :string(255)
-#  age             :integer
-#  gender          :integer
-#  city            :string(255)
-#  country         :string(255)
-#  zipcode         :string(255)
-#  img_path        :string(255)
-#  role_id         :integer
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  email           :string(255)
-#
-
 require 'spec_helper'
 
 describe User do

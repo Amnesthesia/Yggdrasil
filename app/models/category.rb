@@ -1,3 +1,4 @@
 class Category < ActiveRecord::Base
-  attr_accessible :category, :description, :img_path, :points, :title
+  belongs_to :category
+  attr_accessible :description, :img_path, :points, :title
 end

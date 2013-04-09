@@ -1,3 +1,6 @@
 class Activity < ActiveRecord::Base
-  attr_accessible :action, :category, :post, :user
+  belongs_to :user
+  belongs_to :category
+  belongs_to :post
+  attr_accessible :action
 end

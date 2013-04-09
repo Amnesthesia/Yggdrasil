@@ -1,3 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :category, :content, :title, :user
+  belongs_to :user
+  belongs_to :category
+  attr_accessible :content, :title
 end
